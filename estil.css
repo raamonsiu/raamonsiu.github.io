@@ -1,0 +1,137 @@
+/* Estils generals per al text */
+text {
+    color: #2F2929; /* Color del text */
+    font-family: 'Droid Sans Regular', 'Arial Narrow', Arial, sans-serif; /* Tipus de lletra */
+}
+
+/* Estils generals per al cos de la pàgina */
+body {
+    background-color: #FFFFFF; /* Color de fons de la pàgina */
+    /* Eliminar el padding i margin per defecte del navegador */
+    margin: 0; 
+    padding: 0; 
+    display: flex; /* Usant Flexbox per a l'estructura */
+    flex-direction: column; /* Col·loca els elements en columna, per assegurar que el footer es mantingui a baix */
+    min-height: 100vh; /* Assegura que el cos ocupi almenys el 100% de l'altura de la finestra */
+}
+
+/* Estils per al títol principal */
+.titol{
+    font-size: 25px; /* Mida de la font */
+    font-family: 'Viga Regular', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Tipus de lletra (tipus de "recanvi") */
+    color: #739EA7; /* Color del text */
+    text-align: center; /* Centra el text */
+}
+
+/* Estils per al subtítol */
+.subtitol {
+    font-size: 16px; /* Mida de la font */
+    font-family: 'Droid Sans Regular', 'Arial Narrow', Arial, sans-serif; /* Tipus de lletra */
+    color: #C2BCAC; /* Color del text */
+    text-align: center; /* Centra el text */
+    margin: 0% 15%; /* Màrgenes esquerra i dreta per ajustar l'amplada del subtítol */
+}
+
+/* Estils per a la seccio */
+section {
+    display: flex; /* Utilitza Flexbox per distribuir els elements dins de la secció */
+    width: 300px; /* Amplada fixa de la secció */
+    height: 215px; /* Altura fixa de la secció */
+}
+
+/* Estils per a les imatges dins de les seccions */
+section img {
+    width: 0; /* Inicialment, l'amplada de la imatge és 0 */
+    flex-grow: 1; /* La imatge ocuparà tot l'espai disponible dins de la secció */
+    object-fit: cover; /* Manté la proporció de la imatge, cobrint l'espai disponible */
+    opacity: .8; /* Opacitat inicial de la imatge */
+    transition: .5s ease; /* Efecte suau per a la transició quan es canvia l'estil */
+}
+
+/* Efecte al passar el ratolí per sobre de la imatge */
+section img:hover {
+    cursor: crosshair; /* Canvia el cursor a una creu quan el ratolí passa per sobre */
+    width: 140px; /* Augmenta l'amplada de la imatge al passar el ratolí */
+    opacity: 1; /* Estableix l'opacitat a 1 quan es passa el ratolí */
+    filter: contrast(120%); /* Augmenta el contrast de la imatge */
+}
+
+/* Estils per al contenidor (pare), afegint marges i separació de seccions */
+.container:not(.container .container) { 
+    margin: 0px 20px; /* Màrgenes per als contenidors exteriors */
+    margin-bottom: 60px; /* Màrgen inferior per separar del footer */
+}
+
+/* Estils per a les capçaleres de secció (h2) */
+.section-header h2 {
+    color: #739EA7; /* Color del text */
+    font-family: 'Viga Regular', 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif; /* Tipus de lletra */
+    font-size: 20px; /* Mida de la font */
+    margin-bottom: 0px; /* Elimina el marge inferior */
+    border-bottom: 2px solid #739EA7; /* Sota la capçalera, una línia de separació */
+}
+
+/* Estils per als contenidors d'informació (específics per als dos grups d'experiències) */
+.info, #dosPrimers, #dosSegons {
+    display: flex; /* Utilitza Flexbox per a distribuir els elements dins del contenidor */
+    justify-content: space-between; /* Espaiar els elements de manera equitativa */
+    padding-right: 20px; /* Padding a la dreta */
+    gap: 150px; /* Espai entre els elements */
+}
+
+/* Estils per als ítems de la llista amb els marcadors personalitzats */
+ul li::marker {
+    font-size: 2em; /* Augmenta la mida dels marcadors (els cercles) */
+    color: #2F2929; /* Color dels cercles */
+}
+
+/* Espai entre els marcadors i el text de la llista */
+ul li {
+    padding-left: 20px; /* Augmenta l'espai entre el cercle i el text */
+}
+
+/* Estils per a la galeria d'imatges */
+.galeria-fotos {
+    margin-top: 20px; /* Màrgen superior per separar de la secció anterior */
+    margin-right: 15%; /* Màrgen dret per ajustar l'amplada de la galeria */
+}
+
+/* Estils per a la secció d'educació */
+.educacio, #infoEducacio, .skills {
+    width: 50%; /* Amplada fixa del 50% per a les seccions */
+}
+
+/* Estils per al footer */
+footer {
+    background-color: #D5C7BA; /* Color de fons del footer */
+    padding: 20px; /* Padding dins del footer */
+    bottom: 0; /* Posiciona el footer a la part inferior */
+    left: 0; /* Alinea el footer a l'esquerra */
+}
+
+/* Estils per al contingut del footer */
+.footer-content {
+    display: flex; /* Utilitza Flexbox per distribuir el contingut del footer */
+    justify-content: space-between; /* Espaiar els elements de manera equitativa */
+}
+
+/* Estils per als enllaços del contacte */
+.contact-info a {
+    color: #2F2929; /* Color dels enllaços */
+    text-decoration: none; /* Elimina el subratllat dels enllaços */
+    font-size: 16px; /* Mida de la font dels enllaços */
+    margin: 5px 20px; /* Màrgenes entre els enllaços */
+}
+
+/* Efecte al passar el ratolí per sobre dels enllaços */
+.contact-info a:hover {
+    color: #739EA7; /* Canvia el color dels enllaços quan es passa el ratolí */
+}
+
+/* Estils per al text de la secció de contacte */
+.contacte {
+    font-size: 20px; /* Mida de la font */
+    font-family: 'Viga Regular', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Tipus de lletra */
+    color: #739EA7; /* Color del text */
+    text-align: center; /* Centra el text */
+}
